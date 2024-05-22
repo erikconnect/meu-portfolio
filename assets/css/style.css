@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika&family=Montserrat&display=swap');
+:root {
+    --cor-primaria: #000000;
+    --cor-secundaria: #F6F6F6;
+    --cor-secundaria-light: #f1dfdf;
+    --cor-terciaria: #E7331F;
+    --cor-hover: #a72112;
+
+    --fonte-primaria: 'Signika', sans-serif;
+    --font-secundaria: 'Montserrat', sans-serif;
+}
+/* Scroll Bar */
+::-webkit-scrollbar {-webkit-appearance: none;}
+::-webkit-scrollbar {width: 3px;height: 3px;}
+::-webkit-scrollbar-track {background: var(--e-global-color-primary);border:1px solid var(--e-global-color-primary);} 
+::-webkit-scrollbar-thumb {background: var(--e-global-color-secondary);border:0px solid var(--e-global-color-secondary);height:300px;border-radius:4px;}
+/* Cream Color */
+.cream-color-setup {
+    --cor-primaria: #FA7070;
+    --cor-secundaria: #C6EBC5;
+    --cor-terciaria: #FBF2CF;
+    --cor-hover: #A1C298;
+
+    --fonte-primaria: 'Signika', sans-serif;
+    --font-secundaria: 'Montserrat', sans-serif;
+}
+/* Dark Green Color */
+.dark-green-setup {
+    --cor-primaria: #2C3639;
+    --cor-secundaria: #DCD7C9;
+    --cor-secundaria-light: #F6F6F6;
+    --cor-terciaria: #A27B5C;
+    --cor-hover: #3F4E4F;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--cor-primaria);
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-primaria);
+    box-sizing: border-box;
+}
+h1 {
+    font-size: 2.8rem;
+    line-height: 1em;
+}
+p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.2em;
+}
+a, strong {
+    color: var(--cor-terciaria);
+    text-decoration: none;
+
+}
+a:hover {
+    color: var(--cor-hover);
+    cursor: pointer;
+    
+}
+.wrapper {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: calc(100vh - 123px);
+    max-width: 1280px;
+    margin: auto;
+}
+
+.text {
+    padding: 0% 2% 0 0%;
+    width: 50%;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5%;
+}
+
+.image {
+    padding: 0% 0% 0% 2%;
+    width: 46%;
+    align-content: center;
+    position: relative;
+}
+.image img {
+    border-radius: 20px;
+    max-width: 100%;
+    height: 65vh;
+    object-fit: cover;
+    width: 100%;
+}
+.image::before {
+    content: '';
+    width: 95%;
+    height: 75%;
+    position: absolute;
+    border: 1px solid var(--cor-terciaria);
+    z-index: -1;
+    left: 0%;
+    border-radius: 20px;
+    top: 17%;
+}
+a.button {
+    /* background-color: var(--cor-terciaria); */
+    border: 2px solid var(--cor-terciaria);
+    width: 50%;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 15px 0;
+    text-decoration: none;
+    color: var(--cor-secundaria);
+    font-family: var(--fonte-primaria);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+a.button:hover {
+    border: 2px solid var(--cor-hover);
+}
+a.button svg {
+    fill: var(--cor-secundaria);
+    width: 24px;
+    height: 24px;
+}
+.links {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+}
+.subtitulo{
+    font-family:var(--fonte-primaria);
+    font-weight: 400;
+    font-size: 1.2rem;
+    width: 100%;
+}
+header.cabecalho {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-height: 25px;
+    padding: 15px 0;
+    max-width: 1250px;
+    justify-content: space-between;
+    margin: auto;
+}
+.cabecalho-logo {
+    display: flex;
+    gap: 10px;
+}
+svg#icon-connectsti {
+    fill: var(--cor-terciaria);
+    width: 60px;
+    height: auto;
+}
+nav.cabecalho-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 30px;
+}
+footer.rodape {
+    background: var(--cor-terciaria);
+    display: flex;
+    padding: 1%;
+    justify-content: center;
+    align-items: center;
+    color: var(--cor-primaria);
+}
+footer.rodape a {
+    color: var(--cor-secundaria);
+}
+footer.rodape a:hover {
+    color: var(--cor-secundaria-light);
+}
+
+@media (max-width: 1200px) {
+    .links {flex-wrap: wrap;gap: 5px;}
+    a.button {width: 30%;}
+    .image, .text {width: 46%;}
+}
+
+@media (max-width: 480px) {
+    .text {width: 100%;padding: 5%;gap: 15px;}
+    h1 {font-size: 2.2rem;}
+    .links {flex-wrap: wrap; gap: 5px;}
+    .image {width: 100%;padding: 5%;order: -1;}
+    .image::before {
+        content: '';
+        width: 90vw;
+        height: 90%;
+        position: absolute;
+        border: 1px solid var(--cor-terciaria);
+        z-index: -1;
+        left: 2%;
+        border-radius: 20px;
+        top: 10%;
+    }
+    .cabecalho-logo-text {display: none;}
+    header.cabecalho {padding: 5%;}
+    a.button {width: 30%;font-size: 0;}
+    a.button svg {width: 20px;height: 20px;margin-left: 15px;}
+    a.cabecalho-menu-link {font-size: 4vw;}
+    footer.rodape {padding: 3%;}
+}
