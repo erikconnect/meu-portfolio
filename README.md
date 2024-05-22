@@ -1,6 +1,6 @@
 # Portfólio Olá, Bem vindo ao meu projeto de portfólio.
 
-[![image](https://github.com/erikconnect/meu-portfolio/blob/erikconnect-patch-1/meu-portfolio.png)]
+![image](https://github.com/erikconnect/meu-portfolio/blob/erikconnect-patch-1/meu-portfolio.png)]
 
 ## Ferramentas utilizadas:
 
